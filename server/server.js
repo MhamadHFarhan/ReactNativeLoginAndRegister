@@ -3,7 +3,10 @@ const morgan = require("morgan");
 const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
+
+// Importing routes
 const registerRouter = require("./routers/register");
+const loginRouter = require("./routers/login");
 
 const app = express();
 
@@ -22,6 +25,7 @@ try {
 
 // Routes
 app.use("/api/register", registerRouter);
+app.use("/api/login", loginRouter);
 
 // Starting the server
 const PORT = process.env.PORT || 5000;
