@@ -1,4 +1,4 @@
-const User = require("../models/Users");
+const User = require("../modules/Users");
 
 const createUser = (req, res) => {
   const { username, password, email } = req.body;
